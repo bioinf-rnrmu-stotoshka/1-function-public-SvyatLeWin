@@ -25,6 +25,7 @@ def fibonacci (n):
         f=fibonacci(n-1)+fibonacci(n-2)
     return f
 print(fibonacci(6))
+
 def isc(n,a):
     s=0
     assert isinstance(n, int), 'ошибка с числом элементов массива'
@@ -41,6 +42,7 @@ def isc(n,a):
         a[j+1]=k
     return s
 print(isc(6,[6,10,4,5,1,2]))
+
 def counuc(s):
     count=[0,0,0,0]
     assert isinstance(s, str), 'введена не строка'
@@ -58,12 +60,14 @@ def counuc(s):
 
     return count
 print(*counuc('AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'))
+
 def trdnatrna(s):
     assert isinstance(s, str), 'введена не строка'
     assert set(s).issubset({'A', 'C', 'G', 'T'}), 'Присвутствуют посторонние символы'
     r=s.replace("T","U")
     return r
 print(trdnatrna("GATGGAACTTGACTACGTAAATT"))
+
 def comdna(s):
     assert isinstance(s, str), 'введена не строка'
     assert set(s).issubset({'A', 'C', 'G', 'T'}), 'Присвутствуют посторонние символы'
@@ -71,6 +75,7 @@ def comdna(s):
     cs=''.join(c[i] for i in s)
     return cs[::-1]
 print(comdna("AAAACCCGGT"))
+
 def rrr(n, k, memo=None):
     assert isinstance(n, int) and isinstance(k, int), 'введены не числа'
     assert n > 0 and k > 0, 'введены отрицательные числа'
@@ -84,6 +89,7 @@ def rrr(n, k, memo=None):
         return 1
     return rrr(n - 1, k, memo) + k * rrr(n - 2, k, memo)
 print(rrr(5, 3))
+
 def degray(n,m,edges):
     assert isinstance(n, int), 'n и m должны быть числами'
     assert isinstance(m, int), 'n и m должны быть числами'
